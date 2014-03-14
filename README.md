@@ -14,5 +14,5 @@ Developed using WooCommerce 2.1.5, but should work with others.
 - Submit an Issue here at github
 
 ##TODO (based on requests)
-**Currently only supports United States.**
-Make the form displayed use a template rather than fixed code
+- **Currently only supports United States.**
+- Make the form displayed use a template rather than fixed code
