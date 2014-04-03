@@ -356,6 +356,7 @@ function init_fosdick_integration_class() {
                 'BillPhone'         => $order->billing_phone,
                 'Items'             => count($items)
             );
+            //items is an associative array, so you can't use items[$i]
             for($i=1;$i<count($items)+1;$i++){
                 $item = current($items);
                 $querydata["Inv".$i] = $item['sku'];
