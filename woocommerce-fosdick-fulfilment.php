@@ -60,6 +60,7 @@ function init_fosdick_integration_class() {
 
          */
 
+        //Fosdick specific variables
         private $clientCode;
         private $adCode;
         private $sourceCode;
@@ -122,7 +123,7 @@ function init_fosdick_integration_class() {
                     'type' => 'textarea',
                     'default' => ''
                 ),
-                'description' => array(
+                'postURL' => array(
                     'title' => 'Fosdick Endpoint URL',
                     'description' => 'The URL that fosdick gave to send payments to',
                     'type' => 'text',
@@ -164,6 +165,9 @@ function init_fosdick_integration_class() {
          * Will make a real template later, for simplicitiy made in here
          */
         public function payment_fields(){
+            if(!empty($description)){//only show the description if one is set
+                echo "<p>".$description."</p>";
+            }
             echo "<label for='cc_type'>Credit Card Type </label><select id='cc_type' name='cc_type'><option value='1_Visa'>Visa</option><option value='2_MasterCard'>Mastercard</option><option value='3_American Express'>American Express</option><option value='4_Discover'>Discover</option></select><br />";
             echo "<label for='cc_num'>Card Number </label><input type='text' id='cc_num' name='cc_num' maxlength='16' /><br />";
             echo "<label>Expiration Date</label>";
